@@ -45,3 +45,6 @@ b. Tag the commit by including part of the checksum in the git tag command:
 14. So we'll need to push the data itself separately too: `git push origin main`
 15. Since the tags contain all data as a zip file, it's probably better to use lightweight tags, which do not include the data: 
 a. Update the README.md file, add and commit it
+b. Add a lightweight tag (omit the "-a" flag, and the message): `git tag v2.1`
+c. Push the tag to GitHub: `git push origin v2.1`
+d. Surprise: the same thing happened as with the normal tags: a zip file is created that contains the data at the time of the latest commit, even if this latest commit has not yet been pushed to GitHub. 
